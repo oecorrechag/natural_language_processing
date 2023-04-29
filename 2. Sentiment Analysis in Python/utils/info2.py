@@ -7,5 +7,8 @@ avengers = ["Cause if we can't protect the Earth, you can be d*** sure we'll ave
  'There was an idea to bring together a group of remarkable people, to see if we could become something more',
  "These guys come from legend, Captain. They're basically Gods."]
 
+foreign = "L'histoire rendu était fidèle, excellent, et grande."
 
- 
+sentences = ["L'histoire rendu était fidèle, excellent, et grande.",
+ 'Excelente muy recomendable.',
+ 'It had a leak from day one but the return and exchange process was very quick.']
