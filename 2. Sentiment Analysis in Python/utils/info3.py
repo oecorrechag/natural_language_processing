@@ -6,5 +6,12 @@ tweets_list = ["@VirginAmerica it's really aggressive to blast obnoxious 'entert
 
 GoT = 'Never forget what you are, for surely the world will not. Make it your strength. Then it can never be your weakness. Armour yourself in it, and it will never be used to hurt you.'
 
+tweets = ['@VirginAmerica What @dhepburn said.',
+       "@VirginAmerica plus you've added commercials to the experience... tacky.",
+       "@VirginAmerica I didn't today... Must mean I need to take another trip!",
+       '@united he has no priority and Iove it',
+       '@united Pleased to be a Premier Platinum',
+       '@united how can you not put my bag on plane to Seattle. Flight 1212. Waiting  in line to talk to someone about my bag. Status should matter.']
 
+annak = ['Happy families are all alike;', 'every unhappy family is unhappy in its own way']
 
