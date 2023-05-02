@@ -1,50 +1,38 @@
-from pyprojroot import here
+import platform
 from pathlib import Path
-from typing import (
-    Union,
-    Callable,
-    Iterable,
-)
 
-def make_dir_function(
-    dir_name: Union[str, Iterable[str]]
-) -> Callable[..., Path]:
-    """Generate a fucntion that converts a string or iterable of strings into
-    a path relative to the project directory.
+drive = Path('G:/Mi unidad/944/')
+drivel = Path('/mnt/g/mi unidad/944/')
+drive_colab = Path("/content/drive/MyDrive/944/")
 
-    Args:
-        dirname: Name of the subdirectories to extend the path of the main
-            project.
-            If an iterable of strings is passed as an argument, then it is
-            collapsed to a single steing with anchors dependent on the
-            operating system.
+def mod(modality):
+    if modality == 'p':
+        return 'projects'
+    elif modality == 'c':
+        return 'courses'
+    elif modality == 'e':
+        return 'exercises'
+    else:
+        return 'test'
 
-    Returns:
-        A function that returns the path relative to a directory that can
-        receive `n` number of arguments for expansion.
-    """
+def make_dir_line(modality, project_name):
 
-    def dir_path(*args) -> Path:
-        if isinstance(dir_name, str):
-            return here().joinpath(dir_name, *args)
-        else:
-            return here().joinpath(*dir_name, *args)
+    ''' 
+        Esta funcion hace blablabla  \n
+        p for projects \n
+        c for courses \n
+        e for exercises \n
+    '''
 
-    return dir_path
+    modality = mod(modality)
 
-project_dir = make_dir_function("")
+    def dir_dir(*args):
 
-for dir_type in [
-        ["data"],
-        ["data", "raw"],
-        ["data", "processed"],
-        ["data", "interim"],
-        ["data", "external"],
-        ["models"],
-        ["notebooks"],
-        ["references"],
-        ["reports"],
-        ["reports", "figures"]
-    ]:
-    dir_var = '_'.join(dir_type) + "_dir"
-    exec(f"{dir_var} = make_dir_function({dir_type})")
+        user_plataform = platform.system()
+    
+        if user_plataform == 'Windows':
+            return drive.joinpath(modality, project_name, *args)
+        elif user_plataform == 'Linux':
+            return drivel.joinpath(modality, project_name, *args)
+
+    return dir_dir
