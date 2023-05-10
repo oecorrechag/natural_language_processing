@@ -4,5 +4,3 @@
 2. Sentiment Analysis in Python
 
 By: Oscar
-
-A short description of the project.
